@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CPU</title>
+        <link type="text/css" rel="stylesheet" href="CPU.css">
+        <script src="jquery-3.2.1.min.js"></script>
+        <!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script> -->
+        <script type="text/javascript" src="CPU.js"></script>
+    </head>
+    <body>
+        <div class="left" id="left" align="left"></div>
+        <div class="right" id="right" align="right"></div>
+        <div class="top" align="center">
+            <input type="button" id="ControlUnit" value="ControlUnit">
+        </div>
+        <div class="middle" align="center">
+            <div id="middlea">
+                <button class="middle_button" id="PC">PC</button>
+            </div>
+            <div id="draw_0">
+                <canvas class="mycanvas" id="canvas_0"></canvas>
+            </div>
+            <div id="middleb">
+                <button class="middle_button" id="InstructionMemory">Instruction
+                                                                    Memory</button>
+            </div>
+            <div id="middlec">
+                <p>Instruction Register</p>
+                <button class="middle_button" id="InstructionRegister"></button>
+            </div>
+            <div id="middled">
+                <button class="middle_button" id="RegisterFile">RegisterFile</button>
+            </div>
+            <div id="draw_1">
+                <canvas class="mycanvas" id="canvas_1"></canvas>
+            </div>
+            <div id="middlee">
+                <p>ADR</p>
+                <button class="middle_button" id="ADR"></button>
+            </div>
+            <div id="middlef">
+                <p>BDR</p>
+                <button class="middle_button" id="BDR"></button>
+            </div>
+            <div id="middleg">
+                <button class="middle_button" id="ALU">ALU</button>
+            </div>
+            <div id="draw_2">
+                <canvas class="mycanvas" id="canvas_2"></canvas>
+            </div>
+            <div id="middleh">
+                <p>ALUOutDR</p>
+                <button class="middle_button" id="ALUOutDR"></button>
+            </div>
+        </div>
+        <div id="draw_3">
+            <canvas class="mycanvas" id="canvas_3"></canvas>
+        </div>
+        <div id="draw_4">
+            <canvas class="mycanvas" id="canvas_4"></canvas>
+        </div>
+        <div id="draw_6">
+            <canvas class="mycanvas" id="canvas_6"></canvas>
+        </div>
+        <div id="draw_7">
+            <canvas class="mycanvas" id="canvas_7"></canvas>
+        </div>
+        <div class="bottom" align="center">
+            <div id="bottoma">
+                <button class="bottom_button" id="SignZeroExtend">SignZero
+                                                                    Extend</button>
+            </div>
+            <div id="bottomb">
+                <button class="bottom_button" id="DataMemory">Data
+                                                                Memory</button>
+            </div>
+            <div id="draw_5">
+                <canvas class="mycanvas" id="canvas_5"></canvas>
+            </div>
+            <div id="bottomc">
+                <p>DBDR</p>
+                <button class="middle_button" id="DBDR"></button>
+            </div>
+        </div>
+        <div class="function">
+            <div id="function_input">
+                <p>Instruction:</p>
+                <textarea class="InstructionInput" id="InstructionInput"></textarea>
+            </div>
+            <div id="function_button1">
+                <input type="button" class="FunctionButton" id="In" value="In">
+            </div>
+            <div id="function_button2">
+                <input type="button" class="FunctionButton" id="Start">
+            </div>
+            <div id="function_button3">
+                <input type="button" class="FunctionButton" id="Clear" value="C">
+            </div>
+            <div id="function_button4">
+                <input type="button" class="FunctionButton" id="Reset" value="R">
+            </div>
+            <div id="function_button5">
+                <input type="button" class="FunctionButton" id="Slow" value="S">
+            </div>
+        </div>
+    </body>
+</html>
