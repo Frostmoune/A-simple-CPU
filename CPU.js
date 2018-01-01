@@ -1056,113 +1056,130 @@ function ShowAll(i){
         li.remove();
         return;
     }
-    var left=$("#left");
-    string=nowins;
-    listring='#InstructionLi';
-    var li=left.find(listring);
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id=listring.substring(1);
-        left.append(li);
+    if(isStart==0){
+        DeleteLi();
+        var left=$("#left");
+        string=nowins;
+        listring='#InstructionLi';
+        var li=left.find(listring);
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id=listring.substring(1);
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
     }
     else{
-        li[0].innerText=string;
-    }
-    var left=$("#left");
-    var string="curPC:"+curPC.toString(16)+"\n";
-    var li=left.find('#curPCLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="curPCLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    string="NextPC:"+NextPC.toString(16)+"\n";
-    li=left.find('#NextPCLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="NextPCLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    if(Rs[nowins]!=undefined&&Rs[nowins]!=NaN){
-        string="Rs:"+parseInt(Rs[nowins],2).toString(16)+"\n";
-    }
-    else string="Rs:0\n";
-    li=left.find('#RsLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="RsLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    string="ReadData1:"+ReadData1.toString(16)+"\n";
-    li=left.find('#ReadData1Li');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="ReadData1Li";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    if(Rt[nowins]!=undefined&&Rt[nowins]!=NaN){
-        string="Rt:"+parseInt(Rt[nowins],2).toString(16)+"\n";
-    }
-    else string="Rt:0\n";
-    li=left.find('#RtLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="RtLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    string="ReadData2:"+ReadData2.toString(16)+"\n";
-    li=left.find('#ReadData2Li');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="ReadData2Li";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    string="Result:"+Result.toString(16)+"\n";
-    li=left.find('#ResultLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="ResultLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
-    }
-    string="DataOut:"+DataOut.toString(16)+"\n";
-    li=left.find('#DataOutLi');
-    if(li.length<=0){
-        li=document.createElement('li');
-        li.innerText=string;
-        li.id="DataOutLi";
-        left.append(li);
-    }
-    else{
-        li[0].innerText=string;
+        var left=$("#left");
+        string=nowins;
+        listring='#InstructionLi';
+        var li=left.find(listring);
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id=listring.substring(1);
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        var string="curPC:"+curPC.toString(16)+"\n";
+        var li=left.find('#curPCLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="curPCLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        string="NextPC:"+NextPC.toString(16)+"\n";
+        li=left.find('#NextPCLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="NextPCLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        if(Rs[nowins]!=undefined&&Rs[nowins]!=NaN){
+            string="Rs:"+parseInt(Rs[nowins],2).toString(16)+"\n";
+        }
+        else string="Rs:0\n";
+        li=left.find('#RsLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="RsLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        string="ReadData1:"+ReadData1.toString(16)+"\n";
+        li=left.find('#ReadData1Li');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="ReadData1Li";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        if(Rt[nowins]!=undefined&&Rt[nowins]!=NaN){
+            string="Rt:"+parseInt(Rt[nowins],2).toString(16)+"\n";
+        }
+        else string="Rt:0\n";
+        li=left.find('#RtLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="RtLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        string="ReadData2:"+ReadData2.toString(16)+"\n";
+        li=left.find('#ReadData2Li');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="ReadData2Li";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        string="Result:"+Result.toString(16)+"\n";
+        li=left.find('#ResultLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="ResultLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
+        string="DataOut:"+DataOut.toString(16)+"\n";
+        li=left.find('#DataOutLi');
+        if(li.length<=0){
+            li=document.createElement('li');
+            li.innerText=string;
+            li.id="DataOutLi";
+            left.append(li);
+        }
+        else{
+            li[0].innerText=string;
+        }
     }
 }
 
@@ -1212,7 +1229,8 @@ function Begin(){
     }
     else{
         CLK_Show();
-        if(Show==2)Instruction_Show(0);
+        if(Show==0)ShowAll(Math.floor(curPC/4));
+        else if(Show==2)Instruction_Show(0);
     }
     setTimeout("Begin()",Time);
 }
@@ -1227,29 +1245,12 @@ function getDivPos(id){
     return pos;
 }
 
-function Draw_Straight(ctx,beginx,beginy,endx,endy,level,sign=0){
+function Draw_Straight(ctx,beginx,beginy,endx,endy,level){
     ctx.moveTo(beginx,beginy);
     ctx.lineTo(endx,endy);
-    if(sign==0){
-        ctx.lineTo(endx-level,endy-level);
-        ctx.moveTo(endx,endy);
-        ctx.lineTo(endx-level,endy+level);
-    }
-    else if(sign==1){
-        ctx.lineTo(endx-level,endy-level);
-        ctx.moveTo(endx,endy);
-        ctx.lineTo(endx+level,endy-level);
-    }
-    else if(sign==2){
-        ctx.lineTo(endx+level,endy-level);
-        ctx.moveTo(endx,endy);
-        ctx.lineTo(endx+level,endy+level);
-    }
-    else if(sign==3){
-        ctx.lineTo(endx-level,endy+level);
-        ctx.moveTo(endx,endy);
-        ctx.lineTo(endx+level,endy+level);
-    }
+    ctx.lineTo(endx-level,endy-level);
+    ctx.moveTo(endx,endy);
+    ctx.lineTo(endx-level,endy+level);
     ctx.stroke();
 }
 
@@ -1311,7 +1312,7 @@ function Draw_2(){
     if(nowcanvas.getContext){
         var ctx=nowcanvas.getContext('2d');
         ctx.lineWidth=2.2;
-        var beginx=0,endx=79,beginy=22,endy=beginy;
+        var beginx=0,endx=79,beginy=15,endy=beginy;
         if(State==2&&CLK==1){
             ctx.strokeStyle="#000000";
             Draw_Straight(ctx,beginx,beginy,endx,endy,7);
@@ -1403,7 +1404,7 @@ function Draw_5(){
     if(nowcanvas.getContext){
         var ctx=nowcanvas.getContext('2d');
         ctx.lineWidth=2;
-        var beginx=0,endx=134,beginy=10,endy=10;
+        var beginx=0,endx=134,beginy=7,endy=7;
         if(State==4&&CLK==1){
             Draw_Straight(ctx,beginx,beginy,endx,endy,7);
         }
@@ -1413,11 +1414,11 @@ function Draw_5(){
         }
         else if(State==3&&CLK==1){
             Clear_Draw(nowcanvas);
-            beginx=204;endx=244;beginy=10;endy=10;
+            beginx=204;endx=244;beginy=5;endy=5;
             ctx.moveTo(beginx,beginy);
             ctx.lineTo(endx,endy);
             ctx.stroke();
-            beginx=244;endx=244;beginy=10;endy=145;
+            beginx=244;endx=244;beginy=5;endy=145;
             ctx.moveTo(beginx,beginy);
             ctx.lineTo(endx,endy);
             ctx.stroke();
@@ -1530,6 +1531,12 @@ window.onload=function(){
             $(this).val("×"+(Time/500).toString());
         }
     });
+    var Next=$('#Next');
+    Next.click(function(){
+        if(isStart==0&&curPC<Instructions.length*4){
+            curPC+=4;
+        }
+    });
     var PC=$('#PC');
     PC.click(function () {
         preShow=Show;
@@ -1544,13 +1551,16 @@ window.onload=function(){
             Instructions.push(nowInstructions[i]);
             Decode(nowInstructions[i]);
         }
-        // Instructions.push(str);
         InsIn[0].value="";
     });
     var Ins=$('#InstructionMemory');
     Ins.click(function(){
         preShow=Show;
         Show=2;
+        if(isStart==0&&Show==2){
+            preShow=2;
+            Show=0;
+        }
     });
     var ControlUnit=$('#ControlUnit');
     ControlUnit.click(function(){

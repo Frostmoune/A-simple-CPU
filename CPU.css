@@ -99,6 +99,17 @@
     font-weight: bold;
 }
 
+.function #function_button6{
+    position: absolute;
+    top:90%;
+    left:109%;
+    width:21%;
+    height:40%;
+    font-size:20px;
+    font-family:"Times New Roman";
+    font-weight: bold;
+}
+
 .FunctionButton{
     background-color:white;
     border-radius: 5px;
@@ -137,6 +148,14 @@
 }
 
 #Slow{
+    border-radius: 25px;
+    border:none;
+    font-size:25px;
+    color:white;
+    background-color:rgb(41, 40, 40);
+}
+
+#Next{
     border-radius: 25px;
     border:none;
     font-size:25px;
